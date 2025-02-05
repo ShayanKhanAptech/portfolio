@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #0d0d0d;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: #111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+        nav {
+            margin-left: auto;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #00bcd4;
+            transform: translateY(-5px);
+        }
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1200px;
+            margin-top: 120px;
+            position: relative;
+        }
+        .about .content {
+            max-width: 50%;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        .about.content h1{
+            color: #00bcd4;
+    
+        }
+        .about .image img {
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00bcd4;
+            transition: transform 0.3s ease;
+        }
+        .about .image img:hover {
+            transform: scale(1.05);
+        }
+        .about .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .about .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            transition: 0.3s;
+        }
+        .about .social-icons a:hover {
+            color: #00bcd4;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+    .about .content h1 {
+        color: #00bcd4;
+        padding-bottom: 20px;  /* Heading ke niche thoda space */
+    }
+
+    .about .content h2 {
+        margin-top: 20px;  /* Paragraph aur heading ke beech mein gap */
+    }
+
+    .about .content p {
+        margin-top: 15px;  /* Paragraph ke upar gap */
+    }
+
+    @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10%;
+        background: #111;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        animation: navbarFadeIn 1s ease-out; /* Animation apply kiya */
+    }
+
+    /* Optional: Hover effect for navbar items */
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #00bcd4;
+        transform: translateY(-5px);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    body {
+        background-color: #0d0d0d;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 20px;
+        overflow: hidden;
+    }
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10%;
+        background: #111;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        animation: navbarFadeIn 1s ease-out;
+    }
+
+    @keyframes navbarFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Navbar Item Animation */
+    nav ul li:nth-child(1) {
+        animation: slideIn 0.5s ease-out 0.2s forwards;
+    }
+    nav ul li:nth-child(2) {
+        animation: slideIn 0.5s ease-out 0.4s forwards;
+    }
+    nav ul li:nth-child(3) {
+        animation: slideIn 0.5s ease-out 0.6s forwards;
+    }
+    nav ul li:nth-child(4) {
+        animation: slideIn 0.5s ease-out 0.8s forwards;
+    }
+    nav ul li:nth-child(5) {
+        animation: slideIn 0.5s ease-out 1s forwards;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        max-width: 1200px;
+        position: relative;
+        margin-top: 120px;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: fadeInUp 1.5s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .content {
+        max-width: 50%;
+    }
+
+    .content h1 {
+        font-size: 50px;
+        font-weight: bold;
+    }
+    .content span {
+        color: #00bcd4;
+    }
+    .content h2 {
+        color: #00bcd4;
+        font-size: 28px;
+        margin: 10px 0;
+    }
+    .content p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    .buttons button {
+        background: #00bcd4;
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        margin: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 5px;
+    }
+    .buttons button:hover {
+        background: #0097a7;
+    }
+    .image img {
+        width: 400px;
+        filter: drop-shadow(0px 0px 15px #00bcd4);
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+    .image img:hover {
+        transform: scale(1.05);
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    .social-icons a {
+        color: #fff;
+        font-size: 24px;
+        transition: 0.3s;
+    }
+    .social-icons a:hover {
+        color: #00bcd4;
+    }
+
+
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="logo">Portfolio</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sevice.html">Services</a></li>
+                <!-- <li><a href="#">Portfolio</a></li> -->
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="about">
+        <div class="content">
+            <h1 style="color: #00bcd4;">About <span>Me</span></h1>
+            <h2>Frontend Developer</h2>
+            <p>I am a web developer with expertise in HTML, CSS, JavaScript, Bootstrap, and jQuery. I also have a strong understanding of UI/UX design to create responsive and user-friendly websites.</p>
+            <p><strong>Skills:</strong></p>
+            <p>HTML & CSS: Developing responsive and accessible websites</p>
+            <p>JavaScript & jQuery: Implementing interactive features and dynamic content.</p>
+            <p>Bootstrap: Building mobile-first, responsive websites quickly.</p>
+            <p>UI/UX Design: Designing clean, intuitive, and user-centric interfaces.</p>
+            <div class="buttons">
+                <!-- <button>More Details</button> -->
+            </div>
+            <div class="social-icons">
+                
+                <a href="https://www.facebook.com/profile.php?id=100060730073612&mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/shayan_khan_2910?utm_source=qr&igsh=c2Njamlid2N4djc="><i class="fab fa-instagram "></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="image">
+            <img src="asla.jpg" alt="Shayan Khan">
+        </div>
+    </section>
+    
+</body>
+</html>
