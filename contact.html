@@ -183,22 +183,65 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="sevice.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+
+
+
+   
+
+
+
+
     <section class="contact">
         <h1>Contact Me</h1>
-        <h2>Let's Get in Touch!</h2>
-
-        <form action="#" method="POST">
+        <!-- <h2>Let's Get in Touch!</h2> -->
+<br>
+<br>
+<br>
+        <form id="contactform">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+            <a href="mailto:shayankhan80323@gmail.com?subject=Contact Inquiry&body=Hello Shayan, I want to discuss...">
+            <button onclick="showAlert()">Send Massage</button>
         </form>
+
+
+
+      
+    <script>
+        function showAlert() {
+            alert("Great choice! Let’s connect and create something amazing together.")
+        }
+    </script>
+            
+      
+            <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            <script>
+                (function(){
+                    emailjs.init("YOUR_PUBLIC_KEY"); // EmailJS se milne wala PUBLIC KEY yahan paste karein
+                })();
+            
+                document.getElementById("contactForm").addEventListener("submit", function(event){
+                    event.preventDefault();
+                    
+                    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+                        from_name: document.getElementById("name").value,
+                        from_email: document.getElementById("email").value,
+                        message: document.getElementById("message").value
+                    }).then(function(response) {
+                        alert("Message sent successfully!");
+                    }, function(error) {
+                        alert("Failed to send message. Please try again.");
+                    });
+                });
+            </script> -->
+
 
         <div class="social-icons">
             <a href="https://www.facebook.com/profile.php?id=100060730073612&mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
@@ -206,5 +249,13 @@
             <a href="#"><i class="fab fa-linkedin"></i></a>
         </div>
     </section>
+
+
+
+   
+
+  
+    
+    
 </body>
 </html>
